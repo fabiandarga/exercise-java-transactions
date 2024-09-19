@@ -1,11 +1,13 @@
 # Exercise: JDBC Transactions
 
-## 1. Setupp the database
+## 1. Setup the database
 (in Postgresql)
 
 Create a new Database with name **bookstore**
 
 ## 2. Create Books table
+Use this only as a tempalte! Add a Check Constraint to guarantee that the stock
+can never fall below 0.
 ```
 -- Create the 'books' table
 CREATE TABLE books (
@@ -16,10 +18,7 @@ CREATE TABLE books (
 ```
 
 ## 3. Create the Sales table
-
-Use this only as a tempalte! Add a Check Constraint to guarantee that the stock
-can never fall below 0.
-
+Use this only as a tempalte! Add a Check Constraint to guarantee that the quantity is above 0.
 ```
 CREATE TABLE sales (
     sale_id SERIAL PRIMARY KEY,
